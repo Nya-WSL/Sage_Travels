@@ -21,14 +21,52 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0"
+define config.version = "1.0.0"
 
 
 ## 放置在游戏内“关于”屏幕上的文本。将文本放在三个引号之间，并在段落之间留出空
 ## 行。
 
 define gui.about = _p("""
+制作组：Nya-WSL | 桑吉Sage字幕组
 
+编剧：桑吉Sage
+
+CG：冰蓝
+
+友情出演：
+
+晨宝 冰蓝 毕方 六翼游魂
+
+桶鸟 027 猫店长 雨林 殷红
+
+江江 露鸢 红白 袭秋
+
+Thank you for playing.
+
+希望各位玩家的每一天都是Happy Ending.
+
+你知道吗：
+
+程序配色是从桑吉头像抽的色
+
+这个游戏的原始版本是纯DOS窗口的文字游戏
+
+我们一直在尝试将原始版本扩展到多平台 但因为各种限制最后还是搁置了该项目
+
+DOS版本发布于2022年
+
+这个游戏制作的目的只有一个 那就是创死粉丝
+
+bgm为《黄昏之时》
+
+其实最初我们是打算让桑吉配音的，但考虑到游玩环境为直播于是打消了这个念头
+
+其实主界面的图和接吻的cg的原始版本是一个正方形
+
+其实我一直相信桑吉能独立完成这个游戏！
+
+第二部将在近期发布！（主要取决于某位羊姓编剧）
 """)
 
 
@@ -58,7 +96,7 @@ define config.has_voice = True
 ## 将以下语句取消注释就可以设置标题界面播放的背景音乐文件。此文件将在整个游戏中
 ## 持续播放，直至音乐停止或其他文件开始播放。
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "1.mp3"
 
 
 ## 转场 ##########################################################################
@@ -84,7 +122,7 @@ define config.after_load_transition = None
 
 ## 在游戏结束之后进入主菜单时使用的转场。
 
-define config.end_game_transition = None
+define config.end_game_transition = dissolve
 
 
 ## 用于控制在游戏开始标签不存在时转场的变量。作为替代，在显示初始化场景后使用
@@ -113,7 +151,7 @@ define config.window_hide_transition = Dissolve(.2)
 
 ## 控制默认的文字显示速度。默认的 0 为瞬间，而其他数字则是每秒显示出的字符数。
 
-default preferences.text_cps = 4
+default preferences.text_cps = 10
 
 
 ## 默认的自动前进延迟。数字越大，等待时间越长，有效范围为 0 - 30。

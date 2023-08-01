@@ -1,3 +1,4 @@
 *.txt
 *.keystore
+**\*rpyc
 game\saves\*

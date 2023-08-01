@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("Sage Travels")
+define config.name = _("Sage's Travels")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "0.0.5"
+define config.version = "1.0.0"
 
 
 ## 放置在游戏内“关于”屏幕上的文本。将文本放在三个引号之间，并在段落之间留出空
@@ -36,23 +36,27 @@ CG：冰蓝
 
 友情出演：
 
-晨宝 冰蓝 毕方 六翼游魂
+晨宝 冰蓝 毕方 六翼 游魂
 
 桶鸟 027 猫店长 雨林 殷红
 
-江江 露鸢 红白 袭秋
+江江 露鸢 红白 袭秋 桑吉Sage
 
 Thank you for playing.
 
 希望各位玩家的每一天都是Happy Ending.
 
-你知道吗：
+目前已知可公开情报：
 
-程序配色是从桑吉头像抽的色
+主题配色是从桑吉头像抽的色
+
+除了袭秋外所有主要角色的颜色都是从各自头像抽的色
 
 这个游戏的原始版本是纯DOS窗口的文字游戏
 
 我们一直在尝试将原始版本扩展到多平台 但因为各种限制最后还是搁置了该项目
+
+这个游戏在未来或许会支持多平台！（Windows | Linux Desktop | Android 目前无法成功构建 | ios 取决于用户的设备 | Web）
 
 DOS版本发布于2022年
 
@@ -60,9 +64,9 @@ DOS版本发布于2022年
 
 bgm为《黄昏之时》
 
-其实最初我们是打算让桑吉配音的，但考虑到游玩环境为直播于是打消了这个念头
+最初我们是打算让桑吉配音的，但考虑到游玩环境为直播于是打消了这个念头
 
-其实主界面的图和接吻的cg的原始版本是一个正方形
+主界面的图和接吻的cg的原始版本是一个正方形
 
 其实我一直相信桑吉能独立完成这个游戏！
 
@@ -230,3 +234,5 @@ init python:
 ## 与 itch.io 项目相关的用户名和项目名，以 / 分隔。
 
 # define build.itch_project = "renpytom/test-project"
+
+    build.include_update = True

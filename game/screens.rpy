@@ -4,7 +4,6 @@
 
 init offset = -1
 
-
 ################################################################################
 ## 样式
 ################################################################################
@@ -314,6 +313,7 @@ screen navigation():
 
             ## “帮助”对移动设备来说并非必需或相关。
             textbutton _("帮助") action ShowMenu("help")
+            textbutton _("检查更新") action updater.Update("http://game.sage.osttsstudio.ltd/st/updates.json", base=None, force=False, public_key=None, simulate=None, add=[], restart=True, confirm=True, patch=True)
 
         if renpy.variant("pc"):
 
@@ -546,7 +546,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("引擎：{a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only]\n\n[renpy.license!t]")
+            text _("引擎：{a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only]\n\n{a=https://nya-wsl.com}Nya-WSL{/a} | {a=https://space.bilibili.com/106415}桑吉Sage{/a}")
 
 
 style about_label is gui_label

@@ -1,4 +1,5 @@
 *.txt
 *.keystore
-**\*rpyc
-game\saves\*
+**/*.rpyc
+game/saves/*
+*.save

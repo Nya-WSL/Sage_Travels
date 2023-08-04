@@ -297,6 +297,8 @@ screen navigation():
 
         textbutton _("读取游戏") action ShowMenu("load")
 
+        textbutton _("检查更新") action updater.Update("http://game.sage.osttsstudio.ltd/st/updates.json", base=None, force=False, public_key=None, simulate=None, add=[], restart=True, confirm=True, patch=True)
+
         textbutton _("设置") action ShowMenu("preferences")
 
         if _in_replay:
@@ -313,7 +315,6 @@ screen navigation():
 
             ## “帮助”对移动设备来说并非必需或相关。
             textbutton _("帮助") action ShowMenu("help")
-            textbutton _("检查更新") action updater.Update("http://game.sage.osttsstudio.ltd/st/updates.json", base=None, force=False, public_key=None, simulate=None, add=[], restart=True, confirm=True, patch=True)
 
         if renpy.variant("pc"):
 

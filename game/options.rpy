@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("Sage's Travels")
+define config.name = _("Sage's Travels Beta")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0.1"
+define config.version = "1.0.2"
 
 
 ## 放置在游戏内“关于”屏幕上的文本。将文本放在三个引号之间，并在段落之间留出空
@@ -66,7 +66,7 @@ bgm为《黄昏之时》
 
 最初我们是打算让桑吉配音的，但考虑到游玩环境为直播于是打消了这个念头
 
-主界面的图和接吻的cg的原始版本是一个正方形
+接吻的cg的原图是一个正方形
 
 这个游戏从立项到发布1.0.0只用了几个小时
 

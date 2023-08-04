@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("Sage's Travels Beta")
+define config.name = _("Sage's Travels α")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0.2"
+define config.version = "1.0.3"
 
 
 ## 放置在游戏内“关于”屏幕上的文本。将文本放在三个引号之间，并在段落之间留出空
@@ -177,7 +177,7 @@ default preferences.afm_time = 15
 ##
 ## 该语句通常不应变更，若要变更，应为有效字符串而不是表达式。
 
-define config.save_directory = "Sage_Travels"
+define config.save_directory = "Sage_Travels_α"
 
 
 ## 图标 ##########################################################################
@@ -217,8 +217,10 @@ init python:
 
     ## 若要封装文件，需将其列为“archive”。
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.png', 'archive')
+    build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.webm', 'archive')
+    build.classify('game/**.mp3', 'archive')
 
     ## 匹配为文档模式的文件会在 Mac 应用程序构建中被复制，因此它们同时出现在 APP
     ## 和 ZIP 文件中。

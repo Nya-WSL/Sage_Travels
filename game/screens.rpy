@@ -3,6 +3,7 @@
 ################################################################################
 
 init offset = -1
+image main_menu = Movie(play="images/main_menu.webm")
 
 ################################################################################
 ## 样式
@@ -339,12 +340,14 @@ style navigation_button_text:
 ##
 ## https://www.renpy.cn/doc/screen_special.html#main-menu
 
+
 screen main_menu():
 
     ## 此语句可确保替换掉任何其他菜单屏幕。
     tag menu
 
-    add gui.main_menu_background
+    #add gui.main_menu_background
+    add "main_menu"
 
     ## 此空框可使标题菜单变暗。
     frame:

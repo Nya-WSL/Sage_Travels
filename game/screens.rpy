@@ -298,7 +298,8 @@ screen navigation():
 
         textbutton _("读取游戏") action ShowMenu("load")
 
-        textbutton _("检查更新") action updater.Update("http://game.sage.osttsstudio.ltd/st/updates.json", base=None, force=False, public_key=None, simulate=None, add=[], restart=True, confirm=True, patch=True)
+        if renpy.variant("pc"):
+            textbutton _("检查更新") action updater.Update("http://game.sage.osttsstudio.ltd/st/updates.json", base=None, force=False, public_key=None, simulate=None, add=[], restart=True, confirm=True, patch=True)
 
         textbutton _("设置") action ShowMenu("preferences")
 
@@ -339,7 +340,6 @@ style navigation_button_text:
 ## 用于在 Ren'Py 启动时显示标题菜单。
 ##
 ## https://www.renpy.cn/doc/screen_special.html#main-menu
-
 
 screen main_menu():
 

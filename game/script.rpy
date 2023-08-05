@@ -8,6 +8,7 @@ define o27 = Character("027", color="#236a00", image="027")
 define hb = Character("红白", color="#B93737", image="hb")
 define xq = Character("袭秋", color="#70e2b1", image="xq")
 
+image sage_i = "sage.png"
 image side sage = "side_sage.png"
 image side asahi = "side_asahi.png"
 image side bf = "side_bf.png"
@@ -31,7 +32,20 @@ default label_market_show = False
 label start:
     scene sky
     play music "<from 13>audio/1.mp3"
+    "... ..."
+    "当前版本为α测试版，如有任何问题请及时跟我们反馈！"
+    "悄悄告诉你，关于页有本项目的部分彩蛋，请在达成任一结局后查看哦"
+    "今天你检查更新了吗？"
+    menu:
+        "是":
+            jump after_start
+        "否":
+            $ updater.update("http://game.sage.osttsstudio.ltd/st/updates.json", base=None, force=False, public_key=None, simulate=None, add=[], restart=True, confirm=True, patch=True)
 
+label after_start:
+    scene sky
+    "那么，你准备好见证小生物的历险了吗？"
+    "... ..."
     "很久很久以前，有一只谜之小生物。"
 
     "为了躲避调查员的追杀，小生物使用了由好心的外星猫猫提供的修女身体。"
@@ -57,8 +71,10 @@ label label_airport:
     $ label_airport_show = True
 
     "小生物来到了一处机场"
+    show sage_i at left
     sage "据猫猫说，这样的交通要道是人类聚集之地。"
     sage "想必在这样的地方，一定能看到不少有趣的人类故事。"
+    hide sage_i
     "可能是由于疫情缘由，机场的人并不算多。而这稀疏人群中，大厅正中央中伫立着的三位男性格外醒目。"
     "三人均是面色凝重，即便不熟悉人类文化的小生物也能感觉到空气中的沉重气氛。"
     "僵持许久，年纪最轻的男孩开口打破了沉默。"
@@ -110,9 +126,11 @@ label label_company:
     $ label_company_show = True
 
     "小生物来到了一处公司。"
+    show sage_i at left
     sage "据说这里是人类用劳动力换取报酬的地方，这对小生物而言是一个全新的概念。"
     sage "想要用劳动力换取报酬的前提条件，则是参加一种名为“面试”的东西。"
     sage "今天，这家名为“楠桐工作室”的公司正在展开一场面试。"
+    hide sage_i
     "好奇的小生物溜进去时，正好是面试的中途。"
     bl "你以为你接受的是谁的爱？是我的爱！"
     "坐在面试官位置的少女似乎正对面试者大发雷霆。"
@@ -154,7 +172,7 @@ label label_company:
     jump label_choose2
 
 label label_market:
-    scene market
+    scene market2
     $ label_market_show = True
 
     "小生物来到了一座菜市场。"

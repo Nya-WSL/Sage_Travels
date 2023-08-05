@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0.3"
+define config.version = "1.0.4"
 
 
 ## 放置在游戏内“关于”屏幕上的文本。将文本放在三个引号之间，并在段落之间留出空
@@ -46,17 +46,30 @@ Thank you for playing.
 
 希望各位玩家的每一天都是Happy Ending.
 
+
 目前已知可公开情报：
 
 主题配色是从桑吉头像抽的色
 
-除了袭秋外所有主要角色的颜色都是从各自头像抽的色
+主界面标题颜色和部分强调色是从桑吉头发抽色并加深以后的结果
+
+除了袭秋、毕方、晨宝外所有主要角色的颜色都是从各自头像抽的色
 
 这个游戏的原始版本是纯DOS窗口的文字游戏
 
 我们一直在尝试将原始版本扩展到多平台 但因为各种限制最后还是搁置了该项目
 
-这个游戏在未来或许会支持多平台！（Windows | Linux Desktop | Android 目前无法成功构建 | ios 取决于用户的设备 | Web）
+这个游戏在未来或许会支持多平台！
+
+目前进度：
+
+Windows 第一部为字幕组内部测试版 我们将在第二部发布时公开第二部下载地址
+
+Linux Desktop 未测试，未公开 | {a=http://game.sage.osttsstudio.ltd/st/game/}Web（点击访问）并不一定是最新版本{/a}
+
+Android 目前无法成功构建 | ios 暂时未达成发布条件
+
+Mac 未进行测试 | itch.io 将在正式版发布时同步发布
 
 DOS版本发布于2022年
 
@@ -217,10 +230,11 @@ init python:
 
     ## 若要封装文件，需将其列为“archive”。
 
-    build.classify('game/**.png', 'archive')
-    build.classify('game/**.jpg', 'archive')
-    build.classify('game/**.webm', 'archive')
+    #build.classify('game/**.png', 'archive')
+    #build.classify('game/**.jpg', 'archive')
+    #build.classify('game/**.webm', 'archive')
     build.classify('game/**.mp3', 'archive')
+    build.classify('game/**.psd', 'archive')
 
     ## 匹配为文档模式的文件会在 Mac 应用程序构建中被复制，因此它们同时出现在 APP
     ## 和 ZIP 文件中。

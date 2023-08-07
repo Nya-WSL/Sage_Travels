@@ -3,3 +3,4 @@
 **/*.rpyc
 game/saves/*
 *.save
+*.exe

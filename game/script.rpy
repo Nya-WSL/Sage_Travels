@@ -42,12 +42,6 @@ label start:
     scene sky
     play music "<from 13>audio/1.mp3"
     "... ..."
-    "当前版本为α测试版，如有任何问题请及时跟我们反馈！"
-    "悄悄告诉你，关于页有本项目的部分彩蛋，请在达成任一结局后查看哦"
-
-label after_start:
-    scene sky
-    "那么，你准备好见证小生物的历险了吗？"
     "... ..."
     "很久很久以前，有一只谜之小生物。"
 
@@ -179,8 +173,10 @@ label label_market:
     $ label_market_show = True
 
     "小生物来到了一座菜市场。"
+    show sage_i at left
     sage "正所谓人生在世，吃喝二字，要了解人类，就应该从人类的吃喝学起。"
     sage "菜市场就自然是一个非常值得调查的地方。"
+    hide sage_i
     "小贩的吆喝声、顾客的讨价还价声、哐哐的剁肉声交织在一起，奏成了一首满是人间烟火气息的交响曲。"
     "小生物正跟随着人流缓慢前行着，她的目光突然被一处摊贩吸引。"
     "这个小摊处于菜市场的边缘位置，地上铺着一张红白蓝的塑料布，左半边不太齐整地排着几条不同种类的死鱼，而右半边则搁着一只水盆。水盆的旁边立着足有半人高的硬纸板，拿红漆刷着几个大字。"
@@ -221,15 +217,19 @@ label label_market:
 label label_end:
     scene sky
     "太阳落山了，小生物的人类调查到此结束。"
+    show sage_i at left
     sage "是时候检查自己在本次调查中的收获了。"
+    hide sage_i
     "它回到了自己的桥洞，开始回想自己今天的经历。"
     "今天是非常漫长的一天，它回想起了自己在旅途之中所下的决心——"
     if choose_a1 and choose_b1 and choose_c1:
         "... ..."
         "... ..."
+        show sage_i at left
         sage "要成为一个能够守护楠桐之悲恋的人。"
         sage "要成为一个能够充满打工之力的人。"
         sage "成为一个能够守护规则的人。"
+        hide sage_i
         "它开始翻看自己的背包。"
         "【六翼的好人卡*1】"
         "【冰蓝的好人卡*1】"
@@ -251,9 +251,11 @@ label label_end:
     elif choose_a2 and choose_b2 and choose_c2:
         "... ..."
         "... ..."
+        show sage_i at left
         sage "要成为一个能够守护楠桐之执恋的人。"
         sage "要成为一个能够守护打工人的人。"
         sage "要成为一个能够守护超越人类之恋的人"
+        hide sage_i
         "在这样的道路上，小生物改变了相遇之人的命运，也获得了悲恋之人的，打工之人和变tai...大爱无疆之人的认可。"
         "它做到了成为一个改变事物的人。"
         "在今后的道路上，想必小生物也会继续做一个守护各种恋情并保护打工人的人吧。"
@@ -272,12 +274,16 @@ label label_end:
     else:
         "... ..."
         "... ..."
+        show sage_i at left
         sage "似乎自己还没有足够的觉悟。"
         sage "又或许是还没有搜集到足够多的东西。"
+        hide sage_i
         "... ..."
         "小生物闭上眼，进入了梦乡。"
+        show sage_i at left
         sage "（呢喃）或许，或许——"
         sage "（呢喃）在下一次的冒险中，会有不同的结局...？"
+        hide sage_i
         "Thank you for playing."
         "Bad Ending: 不知前路为何的修女"
         "点击返回主界面"
@@ -320,8 +326,10 @@ label label_choose3:
             jump label_c2
 
 label label_a1:
+    show sage_i at left
     sage "爱情想必是强求不来的东西。"
     sage "或许放弃对于双方来说才是最好的选择。"
+    hide sage_i
     ly "你是说，我应该，给他自由吗..."
     ly "可是，可是，我放不下晨宝。"
     ly "我知道的，其实我一直都知道的。晨宝是个花心的孩子。他一直都那么交际花。"
@@ -342,8 +350,10 @@ label label_a1:
         jump label_choose_label
 
 label label_a2:
+    show sage_i at left
     sage "既然不甘心，既然痛苦。"
     sage "那就应当拿出行动，继续努力。"
+    hide sage_i
     ly "继续...努力吗？"
     ly "结婚之前都是公平竞争？你说的...好像是有些道理。"
     ly "的确，这不应该是结局。"
@@ -363,8 +373,10 @@ label label_a2:
         jump label_choose_label
 
 label label_b1:
+    show sage_i at left
     sage "即便是邪恶的资本家，也拥有追求爱情的权力。"
     sage "即使是罪恶的资本家，在感到悲伤时也应被温柔以待。"
+    hide sage_i
     bl "谢谢你，你真是个温柔的好人。"
     "【获得道具：冰蓝的好人卡*1】"
     bl "但总是沉溺于悲伤的情感可不行，得抬头往前走。我现在必须得寻找我的下一个打工人了。"
@@ -382,8 +394,10 @@ label label_b1:
         jump label_choose_label
 
 label label_b2:
+    show sage_i at left
     sage "正义理应得到伸张。"
     sage "被压迫的打工人们渴望自由，渴望处刑为他们带来痛苦的源头。"
+    hide sage_i
     "员工们纷纷向小生物叙述自己曾经遭遇过的被压迫故事，让小生物听得眼泪汪汪。"
     "小生物决心加入他们。"
     "【获得道具：打工群友的认可*1】"
@@ -399,14 +413,18 @@ label label_b2:
         jump label_choose_label
 
 label label_c1:
+    show sage_i at left
     sage "先来后到，遵守规则。"
     sage "把这条鱼让给先来的人吧，况且他家人生日这样的时机，要是有了这样的好食材，可谓锦上添花。"
+    hide sage_i
     "老板听了小生物的劝说，也认可地摸摸下巴。"
     "哐哐几刀下去，老板就熟练地宰杀了王靳鱼。他把鱼肉和内脏分开塞进了不同的塑料袋，然后递给红白。"
     "红白则非常高兴地向小生物点点头。"
     hb "哎呀，你真是个好人。"
     "【获得道具：红白的好人卡*1】"
+    show sage_i at left
     sage "想必之后，他们会有一场非常愉快的家庭聚会吧。"
+    hide sage_i
     "小生物想着这一点，露出了笑容。"
     "离开菜市场时，小生物暗暗发誓。"
     "它一定要成为一个守护规则的人。"
@@ -416,8 +434,10 @@ label label_c1:
         jump label_choose_label
 
 label label_c2:
+    show sage_i at left
     sage "即使是人和鱼的感情也是伟大的。"
     sage "这份爱情虽然不为世人所容，但是它的真挚却无可否认。"
+    hide sage_i
     xq "！"
     xq "你，你能理解我吗？"
     xq "我，我其实已经做好了被骂恶心，被骂变态，被骂滚出去的心理准备了。"

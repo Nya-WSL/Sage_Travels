@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("Sage's Travels α")
+define config.name = _("Sage's Travels")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -21,7 +21,7 @@ define gui.show_name = True
 
 ## 游戏版本号。
 
-define config.version = "1.0.5"
+define config.version = "1.1.0"
 
 
 ## 放置在游戏内“关于”屏幕上的文本。将文本放在三个引号之间，并在段落之间留出空
@@ -57,35 +57,17 @@ Thank you for playing.
 
 这个游戏的原始版本是纯DOS窗口的文字游戏
 
-我们一直在尝试将原始版本扩展到多平台 但因为各种限制最后还是搁置了该项目
-
-这个游戏在未来或许会支持多平台！
-
-目前进度：
-
-Windows 第一部为字幕组内部测试版 我们将在第二部发布时公开第二部下载地址
-
-Linux Desktop 未测试，未公开 | {a=http://game.sage.osttsstudio.ltd/st/game/}Web（点击访问）并不一定是最新版本{/a}
-
-Android 目前无法成功构建 | ios 暂时未达成发布条件
-
-Mac 未进行测试 | itch.io 将在正式版发布时同步发布
-
-DOS版本发布于2022年
-
 这个游戏制作的目的只有一个 那就是创死粉丝
 
 bgm为《黄昏之时》
 
 最初我们是打算让桑吉配音的，但考虑到游玩环境为直播于是打消了这个念头
 
-接吻的cg的原图是一个正方形
-
 这个游戏从立项到发布1.0.0只用了几个小时
 
 其实我一直相信桑吉能独立完成这个游戏！
 
-第二部将在近期发布！（主要取决于某位羊姓编剧）
+第二部将在近期发布！（主要取决于某位住在桥洞的羊姓编剧）
 """)
 
 
@@ -241,7 +223,7 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
-
+    build.include_update = True
 
 ## 执行应用内购需要一个 Google Play 许可密钥。许可密钥可以在 Google Play 开发者
 ## 控制台的“Monetize” > “Monetization Setup” > “Licensing”页面找到。
@@ -251,6 +233,4 @@ init python:
 
 ## 与 itch.io 项目相关的用户名和项目名，以 / 分隔。
 
-# define build.itch_project = "renpytom/test-project"
-
-    build.include_update = True
+define build.itch_project = "Nya-WSL/sage-travels"

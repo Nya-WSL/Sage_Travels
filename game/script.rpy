@@ -29,18 +29,21 @@ default label_airport_show = False
 default label_company_show = False
 default label_market_show = False
 
+label before_main_menu:
+    scene sky
+    "今天你检查更新了吗？"
+    menu:
+        "是":
+            return
+        "否":
+            $ updater.update("http://game.sage.osttsstudio.ltd/st/updates.json", base=None, force=False, public_key=None, simulate=None, add=[], restart=True, confirm=True, patch=True)
+
 label start:
     scene sky
     play music "<from 13>audio/1.mp3"
     "... ..."
     "当前版本为α测试版，如有任何问题请及时跟我们反馈！"
     "悄悄告诉你，关于页有本项目的部分彩蛋，请在达成任一结局后查看哦"
-    "今天你检查更新了吗？"
-    menu:
-        "是":
-            jump after_start
-        "否":
-            $ updater.update("http://game.sage.osttsstudio.ltd/st/updates.json", base=None, force=False, public_key=None, simulate=None, add=[], restart=True, confirm=True, patch=True)
 
 label after_start:
     scene sky
